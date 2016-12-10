@@ -1,4 +1,4 @@
-# Ionic 2 provisionner
+# Ionic 2 provisioner
 
 Initialize this project :
 ```bash

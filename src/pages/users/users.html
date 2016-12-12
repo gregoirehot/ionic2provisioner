@@ -20,7 +20,7 @@
 
   <h3>Users view page</h3>
 
-<ion-searchbar (input)="search($event)"></ion-searchbar>
+<ion-searchbar (input)="search($event)" [debounce]="1000"></ion-searchbar>
 
     <ion-list>
     <button ion-item *ngFor="let user of users" (click)="goToDetails(user.login)">

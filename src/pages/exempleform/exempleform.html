@@ -1,34 +1,29 @@
-<form (ngSubmit)="onMovieSubmit()" [formGroup]="formGroupMovie">
+<!--<form (ngSubmit)="onMovieSubmit()" [formGroup]="formGroupMovie">
     <input formControlName="movieTitle" type="text" placeholder="Titre du film" />
     <span style="color:red;" [hidden]="formGroupMovie.controls.movieTitle.valid">Invalide</span>
     <br />
     <input formControlName="movieDirector" type="text" placeholder="Réalisateur" />
-    <span style="color:red;"  [hidden]="formGroupMovie.controls.movieDirector.valid">Invalide</span>
+    <span style="color:red;" [hidden]="formGroupMovie.controls.movieDirector.valid">Invalide</span>
     <br />
     <button type="submit">Ajouter</button>
 </form>
 
 <br /><br />
 
-<br />
-
-{{ formGroupMovie.value | json }}
-{{formGroupMovie.status }}
+<br /> {{ formGroupMovie.value | json }} {{formGroupMovie.status }}
 <br /><br />
 <hr>
 
-<br /><br />
-{{contact}}
+<br /><br /> {{contact}}
 <br />
 <div class="layout horizontal">
-<div [innerText]="email" ></div>
+    <div [innerText]="email"></div>
 
-<input type="text" #name placeholder="nom"  />
+    <input type="text" #name placeholder="nom" />
 
-<button (click)="onClick($event, name.value)">ok</button>
+    <button (click)="onClick($event, name.value)">ok</button>
 
-<input type="text" [(ngModel)]="movieTitle">
-{{movieTitle}}
+    <input type="text" [(ngModel)]="movieTitle"> {{movieTitle}}
 </div>
 <br /><br />
 <hr>
@@ -39,4 +34,4 @@
     <li *ngFor="let feature of features">
         {{feature.description}}
     </li>
-</ul>
+</ul>-->

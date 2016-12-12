@@ -14,6 +14,9 @@ import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
 
+// Pages details
+import {UserDetailsPage } from '../pages/user-details/user-details';
+
 // Providers
 import { GithubUsers } from '../providers/github-users';
 
@@ -29,7 +32,8 @@ import { GithubUsers } from '../providers/github-users';
     TabsPage,
     UsersPage,
     ReposPage,
-    OrganisationsPage
+    OrganisationsPage,
+    UserDetailsPage 
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -45,7 +49,8 @@ import { GithubUsers } from '../providers/github-users';
     TabsPage,
     UsersPage,
     ReposPage,
-    OrganisationsPage
+    OrganisationsPage,
+    UserDetailsPage 
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

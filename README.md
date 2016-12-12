@@ -15,4 +15,4 @@ Add new page :
 ```bash
 ionic g page yourpagename
 
-```
+``` 

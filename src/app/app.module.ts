@@ -10,6 +10,10 @@ import { ExemplePage } from '../pages/exemple/exemple';
 import { ExempleFormPage } from '../pages/exempleform/exempleform';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { UsersPage } from '../pages/users/users';
+import { ReposPage } from '../pages/repos/repos';
+import { OrganisationsPage } from '../pages/organisations/organisations';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,10 @@ import { TabsPage } from '../pages/tabs/tabs';
     HomePage,
     ExemplePage,
     ExempleFormPage,
-    TabsPage
+    TabsPage,
+    UsersPage,
+    ReposPage,
+    OrganisationsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,7 +39,10 @@ import { TabsPage } from '../pages/tabs/tabs';
     HomePage,
     ExemplePage,
     ExempleFormPage,
-    TabsPage
+    TabsPage,
+    UsersPage,
+    ReposPage,
+    OrganisationsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

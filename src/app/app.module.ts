@@ -14,6 +14,9 @@ import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
 
+// Providers
+import { GithubUsers } from '../providers/github-users';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { OrganisationsPage } from '../pages/organisations/organisations';
     ReposPage,
     OrganisationsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GithubUsers
+    ]
 })
 export class AppModule {}

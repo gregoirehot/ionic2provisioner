@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 
 // Models
 import { User } from '../../models/user';
@@ -29,7 +29,10 @@ export class UsersPage {
   users: User[];
   originalUsers: User[];
 
-  constructor(public navCtrl: NavController, private githubUsers: GithubUsers, private auth: AuthService) {
+  constructor(public navCtrl: NavController, private githubUsers: GithubUsers, private auth: AuthService, private menuCtrl: MenuController) {
+    this.menuCtrl.enable(true);
+
+
     let info = this.auth.getUserInfo();
     this.username = info.name;
     this.email = info.email;

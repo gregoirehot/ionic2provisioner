@@ -27,3 +27,5 @@ ionic run android
 ``` 
 
 
+email : email
+password : 123456

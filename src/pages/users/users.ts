@@ -6,9 +6,12 @@ import { User } from '../../models/user';
 
 // Providers
 import { GithubUsers } from '../../providers/github-users';
+import { AuthService } from '../../providers/auth-service';
 
 // Page details
 import { UserDetailsPage } from '../user-details/user-details';
+
+import { LoginPage } from '../login/login';
 
 /*
   Generated class for the Users page.
@@ -21,10 +24,16 @@ import { UserDetailsPage } from '../user-details/user-details';
   templateUrl: 'users.html'
 })
 export class UsersPage {
+  username = '';
+  email = '';
   users: User[];
   originalUsers: User[];
 
-  constructor(public navCtrl: NavController, private githubUsers: GithubUsers) {
+  constructor(public navCtrl: NavController, private githubUsers: GithubUsers, private auth: AuthService) {
+    let info = this.auth.getUserInfo();
+    this.username = info.name;
+    this.email = info.email;
+
     githubUsers.load().subscribe(users => {
       //console.log(users)
       this.users = users;
@@ -49,6 +58,12 @@ export class UsersPage {
         this.users = users
       });
     }
+  }
+
+   public logout() {
+    this.auth.logout().subscribe(succ => {
+        this.navCtrl.setRoot(LoginPage)
+    });
   }
 
   ionViewDidLoad() {

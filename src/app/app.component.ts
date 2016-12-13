@@ -6,10 +6,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
-import { OrganisationsPage } from '../pages/organisations/organisations';
 import { ExemplePage } from '../pages/exemple/exemple';
 
 import { FormPage } from '../pages/form/form';
+
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,7 @@ import { FormPage } from '../pages/form/form';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = UsersPage;
+  rootPage: any = LoginPage;
   pages: Array<{title: string, component: any}>;
 
 
@@ -28,8 +29,7 @@ export class MyApp {
     this.pages = [
       { title: 'Users', component: UsersPage },
       { title: 'Form', component: FormPage }, 
-      { title: 'Repos', component: ReposPage },
-      { title: 'Organisations', component: OrganisationsPage },     
+      { title: 'Repos', component: ReposPage }, 
       { title: 'Exemple', component: ExemplePage }, 
     ];
   }

@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AgeValidator } from  '../../validators/age';
 import { UsernameValidator } from  '../../validators/username';
 
+import { UsersPage } from '../users/users';
+
 /*
   Generated class for the Form page.
 
@@ -65,6 +67,7 @@ export class FormPage {
         console.log("success!")
         console.log(this.slideOneForm.value);
         console.log(this.slideTwoForm.value);
+        this.navCtrl.setRoot(UsersPage);
     }
  
 }

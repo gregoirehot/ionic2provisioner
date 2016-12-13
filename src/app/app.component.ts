@@ -5,10 +5,11 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { UsersPage } from '../pages/users/users';
-import { ReposPage } from '../pages/repos/repos';
 import { ExemplePage } from '../pages/exemple/exemple';
 
 import { FormPage } from '../pages/form/form';
+
+import { LocalStoragePage } from '../pages/local-storage/local-storage';
 
 import { LoginPage } from '../pages/login/login';
 
@@ -29,8 +30,8 @@ export class MyApp {
     this.pages = [
       { title: 'Users', component: UsersPage },
       { title: 'Form', component: FormPage }, 
-      { title: 'Repos', component: ReposPage }, 
       { title: 'Exemple', component: ExemplePage }, 
+      { title: 'Local Storage', component: LocalStoragePage }, 
     ];
   }
 

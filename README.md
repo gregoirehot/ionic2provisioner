@@ -8,6 +8,7 @@ git clone
 
 npm install
 npm install -g ionic cordova
+
 ionic serve
 
 ```
@@ -24,6 +25,15 @@ Build/Run the application. :
 ```bash
 ionic platform add android
 ionic run android
+
+
+npm install -g ios-deploy
+npm install -g ios-sim version
+
+ionic platform add ios
+ionic build ios
+ionic run ios
+
 ``` 
 
 

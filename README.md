@@ -9,6 +9,11 @@ git clone
 npm install
 npm install -g ionic cordova
 
+install and update Android Studio (SDK) : http://spring.io/guides/gs/android/
+ionic plugin add cordova-sqlite-storage
+
+npm install --save @ionic/storage
+
 ionic serve
 
 ```

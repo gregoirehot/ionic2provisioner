@@ -38,7 +38,7 @@ export class UsersPage {
     this.email = info.email;
 
     githubUsers.load().subscribe(users => {
-      //console.log(users)
+      console.log(users)
       this.users = users;
       this.originalUsers = users;
     });
@@ -61,6 +61,17 @@ export class UsersPage {
         this.users = users
       });
     }
+  }
+
+resetData(){
+  this.users = this.originalUsers;
+}
+
+// Filter result start with "moj"
+  filterData(){
+    this.users = this.users.filter((user =>{
+      return user.login.startsWith("moj");
+    }));
   }
 
    public logout() {

@@ -11,7 +11,7 @@
       <ion-icon name="menu"></ion-icon> 
     </button>
     <ion-title>users</ion-title>
-       <ion-buttons end>
+    <ion-buttons end>
       <button ion-button (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
       </button>
@@ -24,10 +24,25 @@
 <ion-content padding>
 
   <h3>Welcome inside, {{username}} Users view page</h3>
+  <ion-grid>
+    <ion-row>
 
-<ion-searchbar (input)="search($event)" [debounce]="1000"></ion-searchbar>
+      <ion-searchbar (input)="search($event)" [debounce]="1000"></ion-searchbar>
 
-    <ion-list>
+      <ion-buttons start>
+        <button ion-button icon-only (click)="resetData()"><ion-icon name="refresh"></ion-icon></button>
+      </ion-buttons>
+
+
+      <ion-buttons start>
+        <button ion-button icon-only (click)="filterData()"><ion-icon name="funnel"></ion-icon></button>
+      </ion-buttons>
+
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-list>
     <button ion-item *ngFor="let user of users" (click)="goToDetails(user.login)">
       <ion-avatar item-left>
         <img [src]="user.avatar_url">

@@ -10,6 +10,7 @@ import { ExemplePage } from '../pages/exemple/exemple';
 import { FormPage } from '../pages/form/form';
 
 import { LocalStoragePage } from '../pages/local-storage/local-storage';
+import { SqlLocalStoragePage } from '../pages/sql-local-storage/sql-local-storage';
 
 import { LoginPage } from '../pages/login/login';
 
@@ -31,7 +32,8 @@ export class MyApp {
       { title: 'Users', component: UsersPage },
       { title: 'Form', component: FormPage }, 
       { title: 'Exemple', component: ExemplePage }, 
-      { title: 'Local Storage', component: LocalStoragePage }, 
+      { title: 'Local Storage @ionic/storage', component: LocalStoragePage }, 
+      { title: 'SQL Local Storage', component: SqlLocalStoragePage }, 
     ];
   }
 

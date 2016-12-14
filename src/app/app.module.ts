@@ -19,6 +19,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 
 import { LocalStoragePage } from '../pages/local-storage/local-storage';
+import { SqlLocalStoragePage } from '../pages/sql-local-storage/sql-local-storage';
 
 // Pages details
 import {UserDetailsPage } from '../pages/user-details/user-details';
@@ -26,7 +27,7 @@ import {UserDetailsPage } from '../pages/user-details/user-details';
 // Providers
 import { GithubUsers } from '../providers/github-users';
 import { AuthService } from '../providers/auth-service';
-
+import {Sql, DatabaseService} from "../providers";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AuthService } from '../providers/auth-service';
     FormPage,
     LoginPage,
     RegisterPage,
-    LocalStoragePage
+    LocalStoragePage,
+    SqlLocalStoragePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -61,13 +63,16 @@ import { AuthService } from '../providers/auth-service';
     FormPage,
     LoginPage,
     RegisterPage,
-    LocalStoragePage 
+    LocalStoragePage,
+    SqlLocalStoragePage 
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GithubUsers,
     AuthService,
-    Storage
+    Storage,
+    Sql,
+    DatabaseService
     ]
 })
 export class AppModule {}

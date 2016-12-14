@@ -4,7 +4,7 @@ Initialize this project :
 ```bash
 Install NodeJS
 
-git clone
+git clone https://github.com/gregoirehot/ionic2provisioner.git
 
 npm install
 npm install -g ionic cordova

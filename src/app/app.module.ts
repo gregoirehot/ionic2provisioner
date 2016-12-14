@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { Storage } from '@ionic/storage';
+
 // Pages
 import { HeaderPage } from '../pages/header/header';
 import { ContactPage } from '../pages/contact/contact';
@@ -64,7 +66,8 @@ import { AuthService } from '../providers/auth-service';
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GithubUsers,
-    AuthService
+    AuthService,
+    Storage
     ]
 })
 export class AppModule {}

@@ -20,6 +20,7 @@ export class SqlLocalStoragePage {
   getMessage: string = '';
   removeMessage: string = '';
   getAllMessage: string = '';
+  removeAllMessage: string = '';
 
   constructor(public navCtrl: NavController, public databaseService: DatabaseService) { }
 
@@ -57,13 +58,25 @@ export class SqlLocalStoragePage {
       });
   }
 
-  remove() {
-    this.databaseService.removeShoppingItem('milk')
+  remove(item: string) {
+    this.databaseService.removeShoppingItem(item)
       .then(success => {
         if (success) {
-          this.removeMessage = 'Milk removed successfully';
+          this.removeMessage = item+' removed successfully';
         } else {
-          this.removeMessage = 'Error in removing milk';
+          this.removeMessage = 'Error in removing '+item;
+        }
+      });
+  }
+
+
+  removeAll() {
+    this.databaseService.removeAllShoppingItem()
+      .then(success => {
+        if (success) {
+          this.removeAllMessage = 'All removed successfully';
+        } else {
+          this.removeAllMessage = 'Error in removing all';
         }
       });
   }

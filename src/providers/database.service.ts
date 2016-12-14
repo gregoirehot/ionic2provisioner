@@ -80,6 +80,19 @@ export class DatabaseService {
             });
     }
 
+
+    removeAllShoppingItem(): Promise<boolean> {
+        let query: string = `DELETE FROM ${this.shopping_list}`;
+        let self = this;
+        return this.initDb
+            .then(() => self._db.query(query))
+            .then(() => true)
+            .catch(error => {
+                console.error("Removing item error -> " + error.err.message);
+                return false;
+            });
+    }
+
     //
     // Getter Setter
     //

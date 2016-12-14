@@ -20,24 +20,28 @@
 </ion-header>
 
 
-<ion-content padding >
+<ion-content padding>
 
-<div class="margin-auto" style="width:800px;">
-  <br>
-  <div style="text-align:center;font-size:large">Shopping list</div>
-  <br>
+  <div class="margin-auto" style="width:800px;">
+    <br>
+    <div style="text-align:center;font-size:large">Shopping list</div>
+    <br>
 
-  <button ion-button color="primary" (click)="add('Water2',2)">Add 1 item</button>
-  <p>{{addMessage}}</p>
-  <br>
-  <button ion-button color="secondary" (click)="get('Water')">Get 1 item</button>
-  <p>{{getMessage}}</p>
-  <br>
-  <button ion-button color="secondary" (click)="getAll()">Get all</button>
-  <p>{{getAllMessage}}</p>
-  <br>
-  <button ion-button color="danger" (click)="remove()">Remove</button>
-  <p>{{removeMessage}}</p>
-</div>
+    <button ion-button color="primary" (click)="add('Water2',1)">Add 1 item</button>
+    <p>{{addMessage}}</p>
+    <br>
+    <button ion-button color="secondary" (click)="get('Water')">Get 1 item</button>
+    <p>{{getMessage}}</p>
+    <br>
+    <button ion-button color="danger" (click)="remove('Water2')">Remove 1 item</button>
+    <p>{{removeMessage}}</p>
+    <br>
+    <button ion-button color="light" (click)="getAll()">Get all</button>
+    <p>{{getAllMessage}}</p>
+    <br>
+    <button ion-button color="danger" (click)="removeAll()">Remove all</button>
+    <p>{{removeAllMessage}}</p>
+    <br>
+  </div>
 
 </ion-content>

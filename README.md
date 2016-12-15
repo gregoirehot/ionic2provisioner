@@ -15,10 +15,6 @@ Change PATH : http://spring.io/guides/gs/android/
 ANDROID_HOME=C:\<installation location>\sdk
 PATH=%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 
-ionic plugin add cordova-sqlite-storage
-
-npm install --save @ionic/storage
-
 ionic serve
 
 ```

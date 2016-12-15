@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 
-//Header
-import { HeaderPage } from '../header/header';
-
 // Models
 import { User } from '../../models/user';
 

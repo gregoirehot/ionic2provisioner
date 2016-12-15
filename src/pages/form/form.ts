@@ -22,9 +22,10 @@ import { UsersPage } from '../users/users';
 export class FormPage {
 
   @ViewChild('signupSlider') signupSlider: any;
+  
 
-  slideOneForm: FormGroup;
-  slideTwoForm: FormGroup;
+  slideOneForm: FormGroup = null;
+  slideTwoForm: FormGroup = null;
 
   submitAttempt: boolean = false;
 

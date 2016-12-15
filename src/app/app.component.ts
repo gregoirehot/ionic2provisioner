@@ -2,8 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { TabsPage } from '../pages/tabs/tabs';
-
 import { UsersPage } from '../pages/users/users';
 import { ExemplePage } from '../pages/exemple/exemple';
 

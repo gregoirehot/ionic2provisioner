@@ -9,7 +9,6 @@ import { HeaderPage } from '../pages/header/header';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { ExemplePage } from '../pages/exemple/exemple';
-import { ExempleFormPage } from '../pages/exempleform/exempleform';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { UsersPage } from '../pages/users/users';
@@ -36,7 +35,6 @@ import {Sql, DatabaseService} from "../providers";
     ContactPage,
     HomePage,
     ExemplePage,
-    ExempleFormPage,
     TabsPage,
     UsersPage,
     UserDetailsPage,
@@ -56,7 +54,6 @@ import {Sql, DatabaseService} from "../providers";
     ContactPage,
     HomePage,
     ExemplePage,
-    ExempleFormPage,
     TabsPage,
     UsersPage,
     UserDetailsPage,

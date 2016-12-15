@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { LoginPage } from '../login/login';
+
 //Providers
 import { DatabaseService } from "../../providers";
+import { AuthService } from '../../providers/auth-service';
 
 /*
   Generated class for the SqlLocalStorage page.
@@ -22,7 +25,7 @@ export class SqlLocalStoragePage {
   getAllMessage: string = '';
   removeAllMessage: string = '';
 
-  constructor(public navCtrl: NavController, public databaseService: DatabaseService) { }
+  constructor(public navCtrl: NavController, public databaseService: DatabaseService, private auth: AuthService) { }
 
   add(item: string, quantity: number) {
     this.databaseService.addShoppingItem(item, quantity)
@@ -118,6 +121,13 @@ export class SqlLocalStoragePage {
 
   ionViewDidLoad() {
     console.log('Hello SqlLocalStoragePage Page');
+  }
+
+
+    public logout() {
+    this.auth.logout().subscribe(succ => {
+        this.navCtrl.setRoot(LoginPage)
+    });
   }
 
 }

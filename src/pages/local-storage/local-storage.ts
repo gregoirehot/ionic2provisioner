@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+import { LoginPage } from '../login/login';
+
+import { AuthService } from '../../providers/auth-service';
+
 /*
   Generated class for the LocalStorage page.
 
@@ -16,7 +20,7 @@ import { Storage } from '@ionic/storage';
 export class LocalStoragePage {
   private storage: Storage;
 
-  constructor(public navCtrl: NavController, storage: Storage) {
+  constructor(public navCtrl: NavController, storage: Storage, private auth: AuthService) {
     this.storage = storage;
 
     // set a key/value
@@ -52,6 +56,12 @@ export class LocalStoragePage {
   clearKeys() {
     this.storage.clear().then(() => {
       console.log('Keys have been cleared');
+    });
+  }
+
+  public logout() {
+    this.auth.logout().subscribe(succ => {
+        this.navCtrl.setRoot(LoginPage)
     });
   }
 
